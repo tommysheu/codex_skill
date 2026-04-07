@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>2022_0726 會議紀錄（v2）</title>
+  <style>
+    body { font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif; max-width: 980px; margin: 32px auto; padding: 0 16px; line-height: 1.8; color: #1f2937; }
+    h1, h2, h3 { color: #111827; }
+    .card { background: #f8fafc; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px 14px; margin: 12px 0; }
+    .warn { border-left: 4px solid #f59e0b; }
+    .ok { border-left: 4px solid #16a34a; }
+    .info { border-left: 4px solid #2563eb; }
+    table { width: 100%; border-collapse: collapse; margin: 8px 0 16px; }
+    th, td { border: 1px solid #e5e7eb; padding: 8px; vertical-align: top; }
+    th { background: #f3f4f6; text-align: left; }
+    code { background: #eef2ff; border-radius: 4px; padding: 2px 6px; }
+  </style>
+</head>
+<body>
+  <h1>Meeting Memo（重新生成）｜2022/07/26 語音雙週會</h1>
+
+  <section class="card info">
+    <p><strong>來源：</strong><code>2022_0726.srt</code>（使用者提供逐字稿）</p>
+    <p><strong>會議時間：</strong>2022-07-26 09:41–10:45（逐字稿標頭）</p>
+    <p><strong>主要與會者：</strong>TS、PH、KC、SL（依發話標記推定）</p>
+    <p><strong>資料品質註記：</strong>逐字稿有重疊發話、辨識誤字、重複片段；以下為「語意校整版」會議 memo。</p>
+  </section>
+
+  <h2>1) 會議目標</h2>
+  <ul>
+    <li>檢視 speech / DMS KPI 進度與下半年重點。</li>
+    <li>討論 mobile 語音記事（快速記錄、快速回看、後續串接 myDMS）。</li>
+    <li>現場演示 meeting memo 觸發詞與擷取流程（highlight / action item）。</li>
+  </ul>
+
+  <h2>2) 議程與重點摘要（時間錨點）</h2>
+  <table>
+    <thead>
+      <tr><th>時間</th><th>議題</th><th>重點</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>00:25–00:29</td>
+        <td>會議連線/字幕驗證</td>
+        <td>測試會議 ID、即時字幕與多人發話；確認網路狀態、耳麥規格會影響延遲與回音。</td>
+      </tr>
+      <tr>
+        <td>00:29–00:36</td>
+        <td>工作項目與 KPI</td>
+        <td>聚焦 2022 年 speech 相關工作，傾向先做單點功能，不做過大範圍一次性改造。</td>
+      </tr>
+      <tr>
+        <td>00:36–00:49</td>
+        <td>mobile 語音記事方向</td>
+        <td>希望做到「快速記錄 + 快速瀏覽」；長句與跨系統整合先降階，採 first-pass 先上線。</td>
+      </tr>
+      <tr>
+        <td>00:46–00:49</td>
+        <td>會後查找需求</td>
+        <td>提出「可按人名/議題快速定位會議片段」需求，降低重聽整場會議成本。</td>
+      </tr>
+      <tr>
+        <td>00:59–01:04</td>
+        <td>memo 功能演示</td>
+        <td>實測 <code>會議重點 meeting highlight</code> 與 <code>待辦事項 action item</code> 的開始/結束觸發，並查看輸出結果。</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>3) 關鍵決議（Decisions）</h2>
+  <div class="card ok">
+    <ol>
+      <li>產品採「先小後大」：先做單一語音記事核心能力，確保可用性。</li>
+      <li>功能切分為 two-pass：
+        <ul>
+          <li>First pass：快速記錄、可回看、可輸出 memo。</li>
+          <li>Second pass：進階分類、深度搜尋、完整 myDMS 串接。</li>
+        </ul>
+      </li>
+      <li>提案先行：由核心成員先提出 proposal，再排入正式開發節奏。</li>
+    </ol>
+  </div>
+
+  <h2>4) 行動項目（Action Items）</h2>
+  <table>
+    <thead>
+      <tr><th>ID</th><th>Owner</th><th>任務內容</th><th>目標輸出</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>A-01</td>
+        <td>TS（主責）</td>
+        <td>整合 mobile 語音記事情境，提出最小可行流程（MVP）與畫面節點。</td>
+        <td>proposal 草案</td>
+      </tr>
+      <tr>
+        <td>A-02</td>
+        <td>KC、SL（協作）</td>
+        <td>盤點與 myDMS 串接需求，定義 first pass 可先 local 暫存之範圍。</td>
+        <td>需求邊界清單</td>
+      </tr>
+      <tr>
+        <td>A-03</td>
+        <td>TS、團隊</td>
+        <td>確認 memo trigger words、姓名辨識規則與誤觸修正流程。</td>
+        <td>操作規範 v1</td>
+      </tr>
+      <tr>
+        <td>A-04</td>
+        <td>團隊</td>
+        <td>定義「會後快速搜尋」最小版本（依人名/議題跳段）。</td>
+        <td>功能規格草稿</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>5) 未決議題與風險</h2>
+  <div class="card warn">
+    <ul>
+      <li>語音辨識受網路、裝置與多人重疊發話影響，品質波動需持續監測。</li>
+      <li>姓名辨識需固定格式，若使用者自由稱呼（例如只說 TS）可能降低準確度。</li>
+      <li>資料落地位置（local / server）與權限管理、SOP 尚待明確。</li>
+      <li>進階搜尋與摘要若過早擴張，可能拖慢核心 MVP 上線。</li>
+    </ul>
+  </div>
+
+  <h2>6) 一句話結論</h2>
+  <p><strong>先把「能快速記、能快速看」做穩，再逐步擴展到搜尋與 myDMS 深度整合，是本次會議共識。</strong></p>
+</body>
+</html>
